@@ -78,7 +78,7 @@ export default function Testimonials() {
             return (
               <div
                 key={t.id}
-                className="rounded-2xl bg-slate-900/80 border border-slate-800 p-6 sm:p-7 backdrop-blur-xl flex flex-col justify-between hover:border-slate-700 transition-all shadow-xl relative"
+                className="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 sm:p-7 backdrop-blur-xl flex flex-col justify-between hover:border-slate-700 transition-all shadow-xl relative"
               >
                 <div>
                   {/* Top Header */}

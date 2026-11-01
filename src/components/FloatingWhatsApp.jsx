@@ -28,11 +28,11 @@ export default function FloatingWhatsApp() {
   ];
 
   return (
-    <div className="fixed bottom-5 left-5 z-50">
+    <div className="fixed bottom-20 sm:bottom-5 left-3 sm:left-5 z-50">
       
-      {/* Quick Chat Popup Modal */}
+      {/* Quick Chat Popup Modal (Mobile Full Width Friendly) */}
       {isOpen && (
-        <div className="mb-3 w-80 sm:w-96 rounded-2xl bg-[#0b1728] border border-slate-700 shadow-2xl p-4 text-right animate-in fade-in slide-in-from-bottom-3 duration-200">
+        <div className="mb-3 w-[calc(100vw-24px)] sm:w-96 max-h-[85vh] overflow-y-auto rounded-2xl bg-[#0b1728] border border-slate-700 shadow-2xl p-4 text-right animate-in fade-in slide-in-from-bottom-3 duration-200">
           
           {/* Header */}
           <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">

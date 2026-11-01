@@ -13,78 +13,70 @@ export default function CashCalculator() {
   const [deadStockPercent, setDeadStockPercent] = useState(20);
 
   // Calculations
-  // Dead Stock in Million Centimes
   const deadStockMillion = Math.round((stockValueMillion * (deadStockPercent / 100)) * 10) / 10;
-  // Dead Stock in DZD (1 Million Centime = 10,000 DZD)
   const deadStockDZD = Math.round(deadStockMillion * 10000);
-  
-  // Annual Holding/Opportunity Cost (roughly 12% in devaluation, space, lost interest)
   const annualLossMillion = Math.round((deadStockMillion * 0.12) * 10) / 10;
 
-  // Percentage cost of ANALYSE DZ (DIY: 4,000 DZD) relative to frozen cash
   const systemPrice = 4000;
   const systemCostPercentage = ((systemPrice / deadStockDZD) * 100).toFixed(2);
 
-  // Quick preset handlers
   const presets = [
     { label: '100 مليون', value: 100 },
-    { label: '300 مليون (متوسط)', value: 300 },
+    { label: '300 مليون (شائع)', value: 300 },
     { label: '500 مليون', value: 500 },
-    { label: '1 مليار سنتيم', value: 1000 },
-    { label: '2 مليار سنتيم', value: 2000 },
+    { label: '1 مليار', value: 1000 },
+    { label: '2 مليار', value: 2000 },
   ];
 
-  // WhatsApp pre-filled link with calculated values
   const whatsappCalculatedText = encodeURIComponent(
     `سلام ANALYSE DZ، استعملت حاسبة الديبو ولقيت عندي حوالي ${deadStockMillion} مليون سنتيم (${deadStockDZD.toLocaleString()} دج) سلعة راقدة ومجمدة في المخزن وحاب نطلب النظام باش نحرر هاد السيولة وننظم الديبو.`
   );
 
   return (
-    <section id="calculator" className="py-20 md:py-28 relative bg-[#071326] border-t border-slate-800">
+    <section id="calculator" className="py-16 sm:py-24 md:py-28 relative bg-[#071326] border-t border-slate-800">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[500px] bg-amber-500/10 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[650px] h-[300px] sm:h-[500px] bg-amber-500/10 blur-[120px] pointer-events-none rounded-full" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 relative">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-bold mb-4 shadow-sm">
-            <Calculator className="w-3.5 h-3.5" />
-            <span>أداة تشخيص فوري حصرية لتاجر الجملة والمستودع</span>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[11px] sm:text-xs font-bold mb-3 sm:mb-4 shadow-sm">
+            <Calculator className="w-3.5 h-3.5 shrink-0" />
+            <span>تشخيص مالي فوري لديبوك</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight font-['Cairo'] mb-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight font-['Cairo'] mb-3 sm:mb-4">
             حاسبة السيولة المجمدة ونزيف الكاش{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-amber-200">
-              (Dead Stock Calculator)
+              (Dead Stock)
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300">
-            حرّك المؤشرات لاكتشاف حجم الأموال النائمة في أركان مخزنك التي تحرمك من السيولة اليومية لشراء بضائع جديدة سريعة الدوران.
+          <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
+            حرّك المؤشرات لاكتشاف حجم الأموال النائمة في أركان مخزنك التي تحرمك من السيولة اليومية لشراء بضائع جديدة.
           </p>
         </div>
 
         {/* The Interactive Calculator Card */}
-        <div className="rounded-3xl bg-slate-900/90 border border-slate-800 backdrop-blur-xl p-6 sm:p-10 shadow-2xl shadow-black/60">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="rounded-2xl sm:rounded-3xl bg-slate-900/90 border border-slate-800 backdrop-blur-xl p-4 sm:p-8 lg:p-10 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
             
-            {/* Left/Sliders Input Panel (7 cols) */}
-            <div className="lg:col-span-7 space-y-8">
+            {/* Input Panel (7 cols) */}
+            <div className="lg:col-span-7 space-y-6 sm:space-y-8 flex flex-col justify-between">
               
               {/* Slider 1: Total Stock Value */}
               <div>
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <label htmlFor={stockInputId} className="text-sm sm:text-base font-bold text-slate-100 flex items-center gap-2">
-                    <span>1. القيمة التقريبية لسلعتك في الديبو:</span>
+                <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3">
+                  <label htmlFor={stockInputId} className="text-xs sm:text-sm md:text-base font-bold text-slate-100">
+                    1. القيمة التقريبية للسلعة بالديبو:
                   </label>
-                  <div className="px-3.5 py-1.5 rounded-xl bg-slate-800 border border-emerald-500/40 text-emerald-400 font-mono font-black text-base sm:text-lg">
-                    {stockValueMillion.toLocaleString()} <span className="text-xs font-['Cairo'] font-semibold">مليون سنتيم</span>
+                  <div className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl bg-slate-800 border border-emerald-500/40 text-emerald-400 font-mono font-black text-sm sm:text-base md:text-lg">
+                    {stockValueMillion.toLocaleString()} <span className="text-[10px] sm:text-xs font-['Cairo'] font-semibold">م سنتيم</span>
                   </div>
                 </div>
 
-                {/* Range Slider */}
                 <input
                   id={stockInputId}
                   type="range"
@@ -93,23 +85,23 @@ export default function CashCalculator() {
                   step="25"
                   value={stockValueMillion}
                   onChange={(e) => setStockValueMillion(Number(e.target.value))}
-                  className="w-full h-3 bg-slate-800 rounded-lg cursor-pointer accent-emerald-500"
+                  className="w-full cursor-pointer accent-emerald-500 py-2"
                 />
 
-                <div className="flex justify-between text-[11px] text-slate-400 mt-2 font-mono">
-                  <span>50 مليون (محل صغير)</span>
+                <div className="flex justify-between text-[10px] sm:text-[11px] text-slate-400 mt-1 font-mono">
+                  <span>50 مليون</span>
                   <span>500 مليون</span>
-                  <span>2 مليار سنتيم (مستودع جملة كبير)</span>
+                  <span>2 مليار سنتيم</span>
                 </div>
 
-                {/* Quick Presets */}
-                <div className="flex flex-wrap items-center gap-2 mt-4">
-                  <span className="text-xs text-slate-400">خيارات سريعة:</span>
+                {/* Quick Presets (Touch Pills) */}
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3">
+                  <span className="text-[11px] text-slate-400 ml-1">أمثلة سريعة:</span>
                   {presets.map((p) => (
                     <button
                       key={p.value}
                       onClick={() => setStockValueMillion(p.value)}
-                      className={`text-xs px-2.5 py-1 rounded-lg border transition-all ${
+                      className={`text-[11px] sm:text-xs px-2.5 py-1 rounded-lg border transition-all active:scale-95 ${
                         stockValueMillion === p.value
                           ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50 font-bold'
                           : 'bg-slate-800/60 text-slate-300 border-slate-700 hover:border-slate-600'
@@ -123,16 +115,15 @@ export default function CashCalculator() {
 
               {/* Slider 2: Dead Stock Percentage */}
               <div className="pt-4 border-t border-slate-800">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <label htmlFor={deadStockPercentId} className="text-sm sm:text-base font-bold text-slate-100 flex items-center gap-2">
-                    <span>2. نسبة السلعة لي ما تحركتش عندها شهرين (+60 يوم):</span>
+                <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3">
+                  <label htmlFor={deadStockPercentId} className="text-xs sm:text-sm md:text-base font-bold text-slate-100">
+                    2. نسبة السلعة الراقدة (+60 يوم):
                   </label>
-                  <div className="px-3.5 py-1.5 rounded-xl bg-slate-800 border border-amber-500/40 text-amber-400 font-mono font-black text-base sm:text-lg">
+                  <div className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl bg-slate-800 border border-amber-500/40 text-amber-400 font-mono font-black text-sm sm:text-base md:text-lg">
                     {deadStockPercent}%
                   </div>
                 </div>
 
-                {/* Range Slider */}
                 <input
                   id={deadStockPercentId}
                   type="range"
@@ -141,82 +132,81 @@ export default function CashCalculator() {
                   step="1"
                   value={deadStockPercent}
                   onChange={(e) => setDeadStockPercent(Number(e.target.value))}
-                  className="w-full h-3 bg-slate-800 rounded-lg cursor-pointer accent-amber-500"
+                  className="w-full cursor-pointer accent-amber-500 py-2"
                 />
 
-                <div className="flex justify-between text-[11px] text-slate-400 mt-2 font-mono">
-                  <span>5% (مستودع شديد الانضباط)</span>
-                  <span className="text-amber-400 font-bold">20% (المتوسط الشائع في الجزائر)</span>
-                  <span>50% (حالة نزيف حرج)</span>
+                <div className="flex justify-between text-[10px] sm:text-[11px] text-slate-400 mt-1 font-mono">
+                  <span>5% (منضبط)</span>
+                  <span className="text-amber-400 font-bold">20% (المعدل بالجزائر)</span>
+                  <span>50% (نزيف حاد)</span>
                 </div>
               </div>
 
-              {/* Algerian Reality Context Note */}
-              <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-400 leading-relaxed">
-                💡 <strong className="text-slate-200">ملاحظة من الميدان:</strong> أظهرت دراسات حركة المستودعات في الجزائر أن ما بين 15% إلى 30% من سلع المستودعات تبقى نائمة لأكثر من شهرين بدون علم صاحب العمل بسبب انعدام تصنيف باريتو الآلي وتنبيهات الركود.
+              {/* Field Note */}
+              <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] sm:text-xs text-slate-400 leading-relaxed">
+                💡 <strong className="text-slate-200">واقع السوق الجزائري:</strong> ما بين 15% إلى 30% من سلع المخازن تبقى نائمة لأكثر من شهرين بدون علم التاجر بسبب غياب التنبيهات الآلية.
               </div>
 
             </div>
 
-            {/* Right/Dynamic Output Results Panel (5 cols) */}
-            <div className="lg:col-span-5">
-              <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-[#0c1e38] border-2 border-amber-500/40 p-6 sm:p-7 relative overflow-hidden shadow-xl shadow-amber-950/20">
+            {/* Results Panel (5 cols) */}
+            <div className="lg:col-span-5 flex flex-col justify-center">
+              <div className="rounded-2xl bg-gradient-to-br from-slate-900 via-[#0c1e38] to-[#071326] border-2 border-amber-500/40 p-4 sm:p-6 relative overflow-hidden shadow-xl shadow-amber-950/20">
                 
-                {/* Glow badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                {/* Status Badge */}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-black bg-amber-500/20 text-amber-300 border border-amber-500/40">
                     <Flame className="w-3.5 h-3.5" />
-                    <span>تشخيص النزيف المالي الفوري</span>
+                    <span>تشخيص النزيف الفوري</span>
                   </span>
-                  <span className="text-[11px] font-mono text-slate-400">ANALYSE ENGINE</span>
+                  <span className="text-[10px] font-mono text-slate-400">ANALYSE DZ</span>
                 </div>
 
                 {/* Main Metric */}
-                <div className="mb-6">
-                  <div className="text-xs text-slate-300 font-medium mb-1">
+                <div className="mb-4 sm:mb-5">
+                  <div className="text-[11px] sm:text-xs text-slate-300 mb-1">
                     💰 السيولة الميتة المحبوسة في مخزنك الآن:
                   </div>
-                  <div className="text-3xl sm:text-4xl font-black text-amber-400 font-['Cairo'] tracking-tight">
-                    {deadStockMillion.toLocaleString()} <span className="text-lg text-amber-200">مليون سنتيم!</span>
+                  <div className="text-2xl sm:text-4xl font-black text-amber-400 font-['Cairo'] tracking-tight">
+                    {deadStockMillion.toLocaleString()} <span className="text-base sm:text-lg text-amber-200">مليون سنتيم!</span>
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mt-1">
-                    (تساوي بالضبط: <strong className="text-slate-200">{deadStockDZD.toLocaleString()} دينار جزائري</strong> نائمة بدون دوران)
+                  <div className="text-[11px] font-mono text-slate-400 mt-1">
+                    تساوي: <strong className="text-slate-100">{deadStockDZD.toLocaleString()} دج</strong> نائمة في الزوايا
                   </div>
                 </div>
 
-                {/* Additional Insight */}
-                <div className="space-y-3 pb-6 border-b border-slate-800 text-xs text-slate-300">
-                  <div className="flex items-start gap-2">
-                    <TrendingDown className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+                {/* Holding Cost */}
+                <div className="space-y-2.5 pb-4 border-b border-slate-800 text-[11px] sm:text-xs text-slate-300">
+                  <div className="flex items-start gap-1.5">
+                    <TrendingDown className="w-3.5 h-3.5 text-red-400 shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-slate-100">تكلفة التخزين وتراجع القيمة سنوياً:</strong>
-                      <span className="text-red-400 font-bold font-mono mr-1">~{annualLossMillion} مليون سنتيم</span>
-                      <span className="text-slate-400 block text-[11px] mt-0.5">(تآكل الكراتين، الغبار، وفقدان فرص الاستثمار)</span>
+                      <span>تآكل القيمة وتكلفة التخزين السنوية:</span>
+                      <strong className="text-red-400 font-mono mr-1">~{annualLossMillion} مليون سنتيم</strong>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-emerald-300 text-xs font-semibold leading-relaxed">
-                    ⚡ تكلفة نظام <strong className="text-white">ANALYSE DZ</strong> (4,000 دج) تمثل فقط{' '}
+                  <div className="p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-[11px] sm:text-xs font-semibold leading-relaxed">
+                    ⚡ تكلفة نظام ANALYSE DZ (4,000 دج) تمثل فقط{' '}
                     <span className="font-mono font-black text-white bg-emerald-500/30 px-1 rounded">{systemCostPercentage}%</span>{' '}
-                    من هذه الأموال المجمدة التي سنساعدك على تحريرها في أيام معدودة!
+                    من هذه الأموال المجمدة التي سنحررها لك.
                   </div>
                 </div>
 
-                {/* WhatsApp Direct Action Button */}
-                <div className="pt-6">
+                {/* Action Button */}
+                <div className="pt-4">
                   <a
                     href={`https://wa.me/213676067652?text=${whatsappCalculatedText}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-5 rounded-xl font-black text-sm text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 transition-all shadow-lg shadow-amber-500/30 transform hover:-translate-y-0.5"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 transition-all shadow-lg shadow-amber-500/30 active:scale-95"
                   >
                     <span>حرر هذه السيولة الآن واسترجع كاشك</span>
-                    <ArrowRight className="w-4 h-4 transform rotate-180" />
+                    <ArrowRight className="w-4 h-4 transform rotate-180 shrink-0" />
                   </a>
 
-                  <div className="text-center mt-3">
-                    <a href="#pricing" className="text-xs text-slate-400 hover:text-emerald-400 transition-colors underline decoration-slate-700">
-                      أو تصفح تفاصيل الباقات والأسعار أدناه
+                  <div className="text-center mt-2">
+                    <a href="#pricing" className="text-[11px] text-slate-400 hover:text-emerald-400 underline decoration-slate-700">
+                      أو تصفح تفاصيل الباقات والأسعار
                     </a>
                   </div>
                 </div>
@@ -231,4 +221,3 @@ export default function CashCalculator() {
     </section>
   );
 }
-

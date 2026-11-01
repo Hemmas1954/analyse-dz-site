@@ -12,10 +12,11 @@ import GuaranteeAndPayment from './components/GuaranteeAndPayment';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import RecentSalesToast from './components/RecentSalesToast';
+import MobileBottomBar from './components/MobileBottomBar';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#071326] text-slate-100 font-['Cairo'] relative selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#071326] text-slate-100 font-['Cairo'] relative selection:bg-emerald-500 selection:text-slate-950 pb-16 md:pb-0">
       {/* Sticky Header */}
       <Navbar />
 
@@ -57,6 +58,9 @@ export default function App() {
 
       {/* Recent Purchases Social Proof Toast */}
       <RecentSalesToast />
+
+      {/* Sticky Mobile Bottom Conversion Bar */}
+      <MobileBottomBar />
     </div>
   );
 }

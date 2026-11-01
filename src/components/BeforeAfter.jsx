@@ -62,7 +62,7 @@ export default function BeforeAfter() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           
           {/* Card 1: BEFORE (The Nightmare) */}
-          <div className="rounded-2xl bg-slate-900/60 border border-red-500/30 p-6 sm:p-8 backdrop-blur-md shadow-xl relative overflow-hidden">
+          <div className="rounded-2xl bg-slate-900/60 border border-red-500/30 p-4 sm:p-8 backdrop-blur-md shadow-xl relative overflow-hidden">
             <div className="flex items-center justify-between pb-4 mb-6 border-b border-red-500/20">
               <div className="flex items-center gap-2">
                 <div className="p-2 rounded-lg bg-red-500/10 border border-red-500/30">
@@ -94,7 +94,7 @@ export default function BeforeAfter() {
           </div>
 
           {/* Card 2: AFTER (The Front Man Command Center) */}
-          <div className="rounded-2xl bg-gradient-to-b from-[#091f33] to-[#071326] border-2 border-emerald-500/50 p-6 sm:p-8 backdrop-blur-md shadow-2xl shadow-emerald-950/30 relative overflow-hidden">
+          <div className="rounded-2xl bg-gradient-to-b from-[#091f33] to-[#071326] border-2 border-emerald-500/50 p-4 sm:p-8 backdrop-blur-md shadow-2xl shadow-emerald-950/30 relative overflow-hidden">
             
             {/* Top highlight glow */}
             <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-300 to-emerald-400" />

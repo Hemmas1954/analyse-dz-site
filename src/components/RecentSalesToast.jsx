@@ -58,7 +58,7 @@ export default function RecentSalesToast() {
   const notif = notifications[currentNotificationIndex];
 
   return (
-    <div className="fixed bottom-24 right-5 z-40 max-w-sm">
+    <div className="fixed bottom-36 sm:bottom-24 right-3 sm:right-5 z-40 max-w-[calc(100vw-24px)] sm:max-w-sm">
       <div className="rounded-2xl bg-[#09182f]/95 border border-emerald-500/40 p-3.5 shadow-2xl backdrop-blur-md flex items-center justify-between gap-3 text-right">
         
         <div className="flex items-center gap-3">

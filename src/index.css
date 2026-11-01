@@ -3,11 +3,13 @@
 @layer base {
   * {
     border-color: rgba(255, 255, 255, 0.1);
+    -webkit-tap-highlight-color: transparent;
   }
   
   html {
     scroll-behavior: smooth;
     direction: rtl;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -16,108 +18,121 @@
     color: #f1f5f9;
     overflow-x: hidden;
     min-height: 100vh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background: #071326;
   }
   ::-webkit-scrollbar-thumb {
     background: #1e293b;
-    border-radius: 4px;
+    border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #10b981;
+  }
+
+  /* Mobile horizontal smooth scrolling */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-panel-glow {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  box-shadow: 0 0 35px -10px rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 35px -10px rgba(16, 185, 129, 0.25);
 }
 
 .glass-panel-danger {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(26, 15, 20, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  box-shadow: 0 0 35px -10px rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  box-shadow: 0 0 35px -10px rgba(239, 68, 68, 0.25);
 }
 
 .glass-panel-warning {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(28, 20, 12, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  box-shadow: 0 0 35px -10px rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 35px -10px rgba(245, 158, 11, 0.25);
 }
 
 /* Grid Background */
 .bg-grid-pattern {
-  background-size: 36px 36px;
+  background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 }
 
 .bg-radial-glow {
-  background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.12) 0%, rgba(15, 44, 89, 0.4) 45%, transparent 70%);
+  background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15) 0%, rgba(15, 44, 89, 0.45) 45%, transparent 70%);
 }
 
 .bg-radial-danger {
-  background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.15) 0%, transparent 70%);
 }
 
-/* Custom Range Slider */
+/* Touch Friendly Mobile Range Sliders */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   background: #1e293b;
-  height: 8px;
+  height: 10px;
   border-radius: 9999px;
   outline: none;
+  touch-action: pan-y;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #10b981;
   cursor: pointer;
-  box-shadow: 0 0 12px #10b981;
-  border: 2px solid #ffffff;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.8);
+  border: 3px solid #ffffff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 18px #10b981;
+input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 1);
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #10b981;
   cursor: pointer;
-  box-shadow: 0 0 12px #10b981;
-  border: 2px solid #ffffff;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.8);
+  border: 3px solid #ffffff;
 }
 
 /* Pulsing Badge & Radar Glow */
@@ -126,7 +141,7 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 14px rgba(16, 185, 129, 0);
   }
 }
 
@@ -134,15 +149,15 @@ input[type="range"]::-moz-range-thumb {
   animation: pulse-emerald 2s infinite;
 }
 
-@keyframes radar-sweep {
-  0% {
-    transform: rotate(0deg);
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-4px);
   }
 }
 
-.radar-sweep {
-  animation: radar-sweep 6s linear infinite;
+.float-subtle {
+  animation: float-subtle 4s ease-in-out infinite;
 }

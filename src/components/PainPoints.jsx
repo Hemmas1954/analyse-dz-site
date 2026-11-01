@@ -91,7 +91,7 @@ export default function PainPoints() {
             return (
               <div
                 key={item.id}
-                className={`rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800 border-t-4 ${item.borderColor} p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:border-slate-700 hover:-translate-y-1.5 ${item.glow}`}
+                className={`rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800 border-t-4 ${item.borderColor} p-4 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:border-slate-700 hover:-translate-y-1.5 ${item.glow}`}
               >
                 <div>
                   {/* Top Badge & Icon */}
@@ -126,7 +126,7 @@ export default function PainPoints() {
                 </div>
 
                 {/* Bottom Impact Box */}
-                <div className="pt-4 border-t border-slate-800/80 text-xs font-semibold text-red-300 bg-red-950/20 -mx-6 -mb-6 p-4 rounded-b-2xl flex items-center gap-2">
+                <div className="pt-3.5 border-t border-slate-800/80 text-[11px] sm:text-xs font-semibold text-red-300 bg-red-950/20 -mx-4 -mb-4 sm:-mx-7 sm:-mb-7 p-3.5 sm:p-4 rounded-b-2xl flex items-center gap-2">
                   <DollarSign className="w-4 h-4 text-red-400 shrink-0" />
                   <span>{item.impact}</span>
                 </div>

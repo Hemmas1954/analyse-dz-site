@@ -77,7 +77,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                  className="w-full text-right p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base font-['Cairo']"
+                  className="w-full text-right p-4 sm:p-6 flex items-center justify-between gap-3 font-bold text-white text-xs sm:text-base font-['Cairo']"
                 >
                   <span className="leading-snug">{item.q}</span>
                   <div className={`p-1.5 rounded-lg border shrink-0 transition-transform duration-200 ${
@@ -88,7 +88,7 @@ export default function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-4">
+                  <div className="px-4 pb-4 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-3.5">
                     {item.a}
                   </div>
                 )}

@@ -7,7 +7,7 @@ export default function GuaranteeAndPayment() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Risk Reversal / 14-Day Guarantee Card */}
-        <div className="rounded-3xl bg-gradient-to-br from-slate-900 via-[#0a1e36] to-slate-900 border-2 border-emerald-500/40 p-8 sm:p-10 mb-16 shadow-2xl relative overflow-hidden">
+        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-900 via-[#0a1e36] to-slate-900 border-2 border-emerald-500/40 p-5 sm:p-10 mb-12 sm:mb-16 shadow-2xl relative overflow-hidden">
           
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 text-center md:text-right">
             
@@ -40,7 +40,7 @@ export default function GuaranteeAndPayment() {
         </div>
 
         {/* Algerian Payment Methods & Security Trust Bar */}
-        <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-6 sm:p-8 backdrop-blur-md">
+        <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 sm:p-8 backdrop-blur-md">
           <div className="text-center mb-6">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">
               طرق الدفع والتسليم المعتمدة رسمياً في الجزائر
