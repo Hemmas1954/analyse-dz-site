@@ -19,11 +19,16 @@ import {
   TrendingDown, 
   TrendingUp, 
   Zap,
-  ArrowRight
+  ArrowRight,
+  Gauge,
+  Rocket,
+  Cpu,
+  Coins,
+  Check
 } from 'lucide-react';
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' or 'telegram'
+  const [activeTab, setActiveTab] = useState('product'); // 'product', 'dashboard', 'telegram'
   const [tableFilter, setTableFilter] = useState('all'); // 'all', 'danger', 'warning', 'safe'
   const [isRefreshingTelegram, setIsRefreshingTelegram] = useState(false);
   const [telegramTime, setTelegramTime] = useState('08:00 AM');
@@ -88,8 +93,39 @@ export default function Hero() {
     }, 600);
   };
 
+  const productFeatures = [
+    {
+      title: '0 دج اشتراك شهري',
+      subtitle: 'دفع مرة واحدة مدى الحياة',
+      icon: Coins,
+      color: 'emerald',
+      bg: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+    },
+    {
+      title: 'حاسبة أرباح وروتور',
+      subtitle: 'احتساب الـ COD الجزائري',
+      icon: Rocket,
+      color: 'teal',
+      bg: 'bg-teal-500/10 border-teal-500/30 text-teal-300'
+    },
+    {
+      title: 'تنبيهات تيليجرام آلية',
+      subtitle: 'تقرير يومي لهاتفك 08:00 AM',
+      icon: Cpu,
+      color: 'cyan',
+      bg: 'bg-cyan-500/10 border-cyan-500/30 text-cyan-300'
+    },
+    {
+      title: 'كشف السلعة الميتة',
+      subtitle: 'تصفية الراقد +60 يوم',
+      icon: Gauge,
+      color: 'amber',
+      bg: 'bg-amber-500/10 border-amber-500/30 text-amber-300'
+    }
+  ];
+
   return (
-    <section className="relative pt-24 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden bg-grid-pattern">
+    <section className="relative pt-24 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden w-full max-w-full bg-grid-pattern">
       {/* Ambient background glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[320px] sm:max-w-[650px] h-[300px] sm:h-[500px] bg-emerald-500/10 blur-[90px] sm:blur-[130px] rounded-full pointer-events-none -z-10" />
       <div className="hidden sm:block absolute top-1/3 left-1/2 -translate-x-1/2 w-[450px] h-[450px] bg-blue-600/10 blur-[140px] rounded-full pointer-events-none -z-10" />
@@ -100,12 +136,18 @@ export default function Hero() {
         <div className="flex justify-center mb-5 sm:mb-6">
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-900/90 border border-emerald-500/30 text-emerald-300 text-[11px] sm:text-xs md:text-sm font-bold shadow-lg shadow-emerald-500/10 backdrop-blur-md text-center">
             <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-            <span>🚨 النظام الأول لتجار الجملة، المستودعات، والـ E-commerce في الجزائر</span>
+            <span>🚨 النسخة الاحترافية v2.0 لتجار الجملة، المستودعات، والـ E-commerce في الجزائر</span>
           </div>
         </div>
 
         {/* Shock Headline & Direct Promise */}
         <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10">
+          
+          {/* Sub-tagline from product box */}
+          <div className="inline-block mb-3 px-3.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 font-mono text-xs font-bold tracking-wider">
+            ANALYSE DZ — SMART GDS v2.0
+          </div>
+
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.3] sm:leading-[1.25] tracking-tight font-['Cairo'] mb-4 sm:mb-6">
             الديبو معمر بالسلعة.. بصح الكاسا فارغة؟{' '}
             <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-emerald-400 via-teal-300 to-emerald-200">
@@ -116,7 +158,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-xs sm:text-base md:text-lg text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto px-1">
-            بلا برامج محاسبة معقدة وبلا اشتراكات شهرية{' '}
+            نظام إدارة المخزون الذكي للتحكم في السيولة والـ Stock. بلا برامج محاسبة معقدة وبلا اشتراكات شهرية{' '}
             <span className="font-bold text-emerald-400 underline decoration-emerald-500/50 underline-offset-4">(0 دج تكلفة تشغيل)</span>. 
             حوّل فوضى ملفات الإكسل إلى غرفة قيادة ذكية تكشف لك السلعة الراقدة وترسل تنبيهات النفاد مجاناً إلى هاتفك عبر Telegram.
           </p>
@@ -128,7 +170,7 @@ export default function Hero() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-black text-sm sm:text-base text-slate-950 bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 hover:from-emerald-300 hover:to-teal-300 transition-all shadow-[0_0_25px_rgba(16,185,129,0.35)] active:scale-95"
             >
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 fill-slate-950 shrink-0" />
-              <span>احصل على النظام الآن (تفعيل فوري)</span>
+              <span>احصل على النسخة الاحترافية (تفعيل فوري)</span>
             </a>
 
             <a
@@ -140,52 +182,72 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Micro Trust Indicators (Mobile Grid) */}
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 max-w-xl mx-auto text-xs text-slate-400 text-center sm:text-right">
-            <div className="flex items-center justify-center sm:justify-start gap-1.5 bg-slate-900/40 sm:bg-transparent p-2 sm:p-0 rounded-lg border border-slate-800/50 sm:border-0">
-              <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-              <span>+140 تاجر ومستودع جزائري</span>
-            </div>
-            <div className="flex items-center justify-center sm:justify-start gap-1.5 bg-slate-900/40 sm:bg-transparent p-2 sm:p-0 rounded-lg border border-slate-800/50 sm:border-0">
-              <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-              <span>0 دج مصاريف شهرية مدى الحياة</span>
-            </div>
-            <div className="flex items-center justify-center sm:justify-start gap-1.5 bg-slate-900/40 sm:bg-transparent p-2 sm:p-0 rounded-lg border border-slate-800/50 sm:border-0">
-              <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-              <span>Excel + Google Sheets متزامن</span>
-            </div>
+          {/* The 4 Core Value Pillars (from the official product box render) */}
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-3.5 max-w-4xl mx-auto">
+            {productFeatures.map((feat, idx) => {
+              const Icon = feat.icon;
+              return (
+                <div
+                  key={idx}
+                  className={`p-3 rounded-2xl border backdrop-blur-md flex flex-col items-center justify-center text-center transition-all hover:scale-[1.02] ${feat.bg}`}
+                >
+                  <div className="w-9 h-9 rounded-xl bg-slate-950/70 border border-white/10 flex items-center justify-center mb-1.5 shadow-sm">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div className="font-bold text-xs sm:text-sm text-white font-['Cairo'] leading-snug">
+                    {feat.title}
+                  </div>
+                  <div className="text-[10px] text-slate-400 font-medium mt-0.5">
+                    {feat.subtitle}
+                  </div>
+                </div>
+              );
+            })}
           </div>
+
         </div>
 
-        {/* Hero Visual: Interactive Mockup Command Center */}
+        {/* Hero Visual: 3D Product Bundle Showcase + Interactive Live Mockup */}
         <div className="relative max-w-5xl mx-auto">
           <div className="relative rounded-2xl p-[1px] bg-gradient-to-b from-emerald-500/40 via-slate-700/50 to-transparent shadow-2xl shadow-emerald-950/40">
             <div className="rounded-2xl bg-[#09182f]/95 border border-slate-800 backdrop-blur-xl overflow-hidden">
               
-              {/* Mockup Header Toolbar */}
+              {/* Mockup Header Toolbar with 3 TABS */}
               <div className="flex flex-col sm:flex-row items-center justify-between border-b border-slate-800/80 bg-slate-950/80 p-2.5 sm:px-4 sm:py-3 gap-2.5">
                 
-                {/* Left indicators (dots) */}
+                {/* Left indicators */}
                 <div className="flex items-center justify-between w-full sm:w-auto">
                   <div className="flex items-center gap-1.5">
                     <div className="w-2.5 h-2.5 rounded-full bg-red-500/80 border border-red-400/40" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80 border border-amber-400/40" />
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 border border-emerald-400/40" />
                     <span className="text-[10px] text-slate-400 mr-2 font-mono truncate max-w-[170px] sm:max-w-none">
-                      ANALYSE_DZ_COMMAND.xlsx
+                      ANALYSE_DZ_SMART_GDS_v2.0.box
                     </span>
                   </div>
                   
-                  <span className="sm:hidden text-[10px] text-emerald-400 font-mono font-bold">
-                    ● متصل
+                  <span className="text-[10px] text-emerald-400 font-mono font-bold flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    <span>النسخة الأصلية</span>
                   </span>
                 </div>
 
-                {/* Tab Switcher (Full Width 50/50 on Mobile) */}
-                <div className="grid grid-cols-2 w-full sm:w-auto p-1 bg-slate-900 rounded-lg border border-slate-800 text-[11px] sm:text-xs font-semibold gap-1">
+                {/* 3 Tab Switcher */}
+                <div className="grid grid-cols-3 w-full sm:w-auto p-1 bg-slate-900 rounded-lg border border-slate-800 text-[10px] sm:text-xs font-semibold gap-1">
+                  <button
+                    onClick={() => setActiveTab('product')}
+                    className={`flex items-center justify-center gap-1 py-1.5 px-2 rounded-md transition-all ${
+                      activeTab === 'product'
+                        ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    <Package className="w-3.5 h-3.5" />
+                    <span>الحقيبة الأصلية</span>
+                  </button>
                   <button
                     onClick={() => setActiveTab('dashboard')}
-                    className={`flex items-center justify-center gap-1.5 py-1.5 px-2.5 rounded-md transition-all ${
+                    className={`flex items-center justify-center gap-1 py-1.5 px-2 rounded-md transition-all ${
                       activeTab === 'dashboard'
                         ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20'
                         : 'text-slate-400 hover:text-white'
@@ -196,7 +258,7 @@ export default function Hero() {
                   </button>
                   <button
                     onClick={() => setActiveTab('telegram')}
-                    className={`flex items-center justify-center gap-1.5 py-1.5 px-2.5 rounded-md transition-all ${
+                    className={`flex items-center justify-center gap-1 py-1.5 px-2 rounded-md transition-all ${
                       activeTab === 'telegram'
                         ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20'
                         : 'text-slate-400 hover:text-white'
@@ -204,20 +266,89 @@ export default function Hero() {
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>إشعار تيليجرام</span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-ping" />
                   </button>
                 </div>
 
               </div>
 
-              {/* TAB 1: Live Dashboard Command Center */}
+              {/* TAB 1: 3D Official Product Mockup Showcase (The Star Image) */}
+              {activeTab === 'product' && (
+                <div className="p-3 sm:p-6 bg-gradient-to-b from-[#071326] via-[#091b33] to-[#071326]">
+                  <div className="relative rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl bg-slate-950/80 group">
+                    
+                    {/* Top overlay badge */}
+                    <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 flex flex-col gap-2">
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-emerald-500/50 backdrop-blur-md text-emerald-300 font-bold text-[10px] sm:text-xs shadow-lg">
+                        <Check className="w-3.5 h-3.5 text-emerald-400 stroke-[3]" />
+                        <span>النسخة الاحترافية SMART GDS v2.0</span>
+                      </div>
+                      <div className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 text-[10px] font-mono">
+                        <span>XLSX • Google Sheets • Telegram Bot</span>
+                      </div>
+                    </div>
+
+                    {/* Top Left Instant Download Tag */}
+                    <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500 text-slate-950 font-black text-[10px] sm:text-xs shadow-md">
+                        <Zap className="w-3 h-3 fill-slate-950" />
+                        <span>تفعيل فوري</span>
+                      </span>
+                    </div>
+
+                    {/* The Product Image */}
+                    <div className="relative overflow-hidden w-full aspect-square sm:aspect-[16/10] max-h-[580px] flex items-center justify-center bg-[#071326]">
+                      <img
+                        src="/product-mockup.jpg"
+                        alt="ANALYSE DZ — SMART GDS v2.0 النسخة الاحترافية لنظام إدارة المخزون الذكي"
+                        className="w-full h-full object-cover object-center transform group-hover:scale-[1.02] transition-transform duration-700"
+                        loading="eager"
+                      />
+                      
+                      {/* Subtle ambient gradient overlay at bottom */}
+                      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#09182f] via-[#09182f]/60 to-transparent pointer-events-none" />
+                    </div>
+
+                    {/* Product Summary Footer Bar */}
+                    <div className="p-3 sm:p-5 bg-[#09182f]/95 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-right">
+                      <div>
+                        <div className="font-black text-sm sm:text-base text-white font-['Cairo']">
+                          الحقيبة الرقمية الكاملة 5 في 1 (ملفات + بوت تيليجرام + حاسبة COD)
+                        </div>
+                        <div className="text-[11px] sm:text-xs text-slate-400 mt-0.5">
+                          جاهزة للعمل فوراً على هاتفك والكمبيوتر بدون أي برامج معقدة
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 w-full sm:w-auto">
+                        <a
+                          href="#pricing"
+                          className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 py-2.5 px-5 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-md active:scale-95"
+                        >
+                          <span>اطلب النسخة الآن</span>
+                          <ArrowRight className="w-3.5 h-3.5 transform rotate-180" />
+                        </a>
+                        <button
+                          onClick={() => setActiveTab('dashboard')}
+                          className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs text-slate-300 bg-slate-900 border border-slate-700 hover:border-slate-600 transition-all"
+                        >
+                          <BarChart3 className="w-3.5 h-3.5 text-emerald-400" />
+                          <span className="hidden xs:inline">تجربة حية</span>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              )}
+
+              {/* TAB 2: Live Dashboard Command Center */}
               {activeTab === 'dashboard' && (
                 <div className="p-3.5 sm:p-6 space-y-4 sm:space-y-6">
                   
-                  {/* 4 Live KPI Cards (2x2 Grid on Mobile for Maximum Clarity) */}
+                  {/* 4 Live KPI Cards */}
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
                     
-                    {/* KPI 1: Total Stock Value */}
+                    {/* KPI 1 */}
                     <div className="glass-panel p-3 sm:p-4 rounded-xl relative overflow-hidden border border-slate-800">
                       <div className="text-slate-400 text-[10px] sm:text-xs mb-1 truncate">
                         إجمالي قيمة المخزون
@@ -231,7 +362,7 @@ export default function Hero() {
                       </div>
                     </div>
 
-                    {/* KPI 2: Active Items */}
+                    {/* KPI 2 */}
                     <div className="glass-panel p-3 sm:p-4 rounded-xl relative overflow-hidden border border-slate-800">
                       <div className="text-slate-400 text-[10px] sm:text-xs mb-1 truncate">
                         أصناف فعالة (SKU)
@@ -245,7 +376,7 @@ export default function Hero() {
                       </div>
                     </div>
 
-                    {/* KPI 3: Danger Rupture Alert */}
+                    {/* KPI 3 */}
                     <div className="glass-panel-danger p-3 sm:p-4 rounded-xl relative overflow-hidden border border-red-500/30">
                       <div className="text-red-300 text-[10px] sm:text-xs mb-1 font-bold truncate flex items-center justify-between">
                         <span>نفاد وشيك (Rupture)</span>
@@ -259,7 +390,7 @@ export default function Hero() {
                       </div>
                     </div>
 
-                    {/* KPI 4: Dead Stock Frozen Cash */}
+                    {/* KPI 4 */}
                     <div className="glass-panel-warning p-3 sm:p-4 rounded-xl relative overflow-hidden border border-amber-500/30">
                       <div className="text-amber-300 text-[10px] sm:text-xs mb-1 font-bold truncate flex items-center justify-between">
                         <span>سيولة مجمدة (+60يوم)</span>
@@ -320,7 +451,7 @@ export default function Hero() {
                     </div>
                   </div>
 
-                  {/* Mobile-Friendly Product Cards (Hidden on desktop, perfect on phones) */}
+                  {/* Mobile-Friendly Product Cards */}
                   <div className="md:hidden space-y-2.5">
                     {filteredProducts.map((p) => (
                       <div
@@ -412,7 +543,7 @@ export default function Hero() {
                 </div>
               )}
 
-              {/* TAB 2: Telegram Automated Morning Report Mockup */}
+              {/* TAB 3: Telegram Automated Morning Report Mockup */}
               {activeTab === 'telegram' && (
                 <div className="p-3 sm:p-8 bg-[#0b141f]">
                   <div className="w-full max-w-xl mx-auto">
@@ -484,7 +615,7 @@ export default function Hero() {
                           </div>
                         </div>
 
-                        {/* Telegram Action Buttons (Full Width on Mobile) */}
+                        {/* Telegram Action Buttons */}
                         <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
                           <a
                             href="#pricing"
