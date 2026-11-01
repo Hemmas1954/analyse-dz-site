@@ -31,11 +31,11 @@ export default function BeforeAfter() {
   ];
 
   return (
-    <section id="before-after" className="py-20 md:py-28 relative bg-[#071326] border-t border-slate-800">
+    <section id="before-after" className="py-16 md:py-28 relative bg-[#071326] border-t border-slate-800 overflow-hidden w-full max-w-full">
       
       {/* Background accents */}
-      <div className="absolute top-1/2 right-10 w-80 h-80 bg-emerald-500/5 blur-[130px] pointer-events-none rounded-full" />
-      <div className="absolute top-1/2 left-10 w-80 h-80 bg-red-500/5 blur-[130px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute top-1/2 right-10 w-80 h-80 bg-emerald-500/5 blur-[130px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute top-1/2 left-10 w-80 h-80 bg-red-500/5 blur-[130px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         

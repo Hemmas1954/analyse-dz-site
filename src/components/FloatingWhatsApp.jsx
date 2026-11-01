@@ -28,7 +28,7 @@ export default function FloatingWhatsApp() {
   ];
 
   return (
-    <div className="fixed bottom-20 sm:bottom-5 left-3 sm:left-5 z-50">
+    <div className="hidden md:block fixed bottom-5 left-5 z-50">
       
       {/* Quick Chat Popup Modal (Mobile Full Width Friendly) */}
       {isOpen && (

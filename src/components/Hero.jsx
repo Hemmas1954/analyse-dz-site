@@ -91,8 +91,8 @@ export default function Hero() {
   return (
     <section className="relative pt-24 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden bg-grid-pattern">
       {/* Ambient background glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[700px] h-[350px] sm:h-[500px] bg-emerald-500/10 blur-[100px] sm:blur-[130px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-5 sm:right-10 w-[250px] sm:w-[450px] h-[250px] sm:h-[450px] bg-blue-600/10 blur-[100px] sm:blur-[140px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[320px] sm:max-w-[650px] h-[300px] sm:h-[500px] bg-emerald-500/10 blur-[90px] sm:blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="hidden sm:block absolute top-1/3 left-1/2 -translate-x-1/2 w-[450px] h-[450px] bg-blue-600/10 blur-[140px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         

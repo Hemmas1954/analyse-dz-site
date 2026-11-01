@@ -19,10 +19,10 @@ export default function Pricing() {
     'https://wa.me/213676067652?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B3%D8%AA%D9%88%D8%AF%D8%B9%20%D9%88%D8%AD%D8%A7%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20VIP%20%D9%84%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D8%AE%D8%B2%D9%88%D9%86%20%D9%88%D8%AA%D9%8A%D9%84%D9%8A%D8%AC%D8%B1%D8%A7%D9%85';
 
   return (
-    <section id="pricing" className="py-20 md:py-28 relative bg-[#06101f] border-t border-slate-800">
+    <section id="pricing" className="py-16 md:py-28 relative bg-[#06101f] border-t border-slate-800 overflow-hidden w-full max-w-full">
       
       {/* Background glow behind VIP card */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[550px] bg-emerald-500/10 blur-[150px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[650px] h-[550px] bg-emerald-500/10 blur-[150px] pointer-events-none rounded-full" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         

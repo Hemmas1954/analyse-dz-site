@@ -57,11 +57,11 @@ export default function PainPoints() {
   ];
 
   return (
-    <section id="pain-points" className="py-20 md:py-28 relative bg-[#06101f] border-t border-slate-800/80">
+    <section id="pain-points" className="py-16 md:py-28 relative bg-[#06101f] border-t border-slate-800/80 overflow-hidden w-full max-w-full">
       
       {/* Background accents */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-500/5 blur-[120px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-amber-500/5 blur-[120px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute top-1/2 left-0 w-80 h-80 bg-red-500/5 blur-[120px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute bottom-10 right-0 w-80 h-80 bg-amber-500/5 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         

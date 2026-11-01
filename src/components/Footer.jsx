@@ -3,7 +3,7 @@ import { Shield, Sparkles, MessageCircle, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#040a14] border-t border-slate-800/80 pt-16 pb-24 md:pb-16 text-slate-400 text-xs">
+    <footer className="bg-[#040a14] border-t border-slate-800/80 pt-16 pb-24 md:pb-16 text-slate-400 text-xs overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800/80">
@@ -21,11 +21,11 @@ export default function Footer() {
               </div>
 
               <div>
-                <div className="flex items-center gap-1.5 leading-none">
+                <div dir="ltr" className="flex items-center gap-1.5 leading-none">
                   <span className="text-xl font-black text-white font-['Cairo']">ANALYSE</span>
                   <span className="text-xl font-black text-emerald-400">DZ</span>
                 </div>
-                <span className="text-[10px] text-slate-400 font-sans uppercase font-bold tracking-wider">
+                <span dir="ltr" className="text-[10px] text-slate-400 font-sans uppercase font-bold tracking-wider">
                   Data. Insights. Growth.
                 </span>
               </div>

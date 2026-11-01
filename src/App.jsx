@@ -16,12 +16,12 @@ import MobileBottomBar from './components/MobileBottomBar';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#071326] text-slate-100 font-['Cairo'] relative selection:bg-emerald-500 selection:text-slate-950 pb-16 md:pb-0">
+    <div className="min-h-screen bg-[#071326] text-slate-100 font-['Cairo'] relative selection:bg-emerald-500 selection:text-slate-950 pb-16 md:pb-0 w-full max-w-full overflow-x-hidden">
       {/* Sticky Header */}
       <Navbar />
 
       {/* Main High-Converting Funnel Sections */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         {/* A. Hero Section with Live Mockup Dashboard & Telegram Bot */}
         <Hero />
 

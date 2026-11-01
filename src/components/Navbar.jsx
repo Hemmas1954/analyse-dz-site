@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 w-full max-w-full overflow-hidden z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-[#071326]/95 backdrop-blur-xl border-b border-slate-800/80 shadow-2xl shadow-black/50 py-2.5 sm:py-3'
             : 'bg-[#071326]/70 backdrop-blur-md py-3.5 sm:py-5 border-b border-slate-800/40'
@@ -62,7 +62,7 @@ export default function Navbar() {
               </div>
 
               <div className="flex flex-col text-right">
-                <div className="flex items-center gap-1 leading-none">
+                <div dir="ltr" className="flex items-center gap-1 leading-none">
                   <span className="text-lg sm:text-2xl font-black tracking-tight text-white font-['Cairo']">
                     ANALYSE
                   </span>
@@ -70,7 +70,7 @@ export default function Navbar() {
                     DZ
                   </span>
                 </div>
-                <span className="text-[9px] sm:text-xs font-semibold tracking-wider text-slate-400 uppercase mt-0.5 font-sans">
+                <span dir="ltr" className="text-[9px] sm:text-xs font-semibold tracking-wider text-slate-400 uppercase mt-0.5 font-sans">
                   Data. Insights. Growth.
                 </span>
               </div>

@@ -3,7 +3,7 @@ import { ShieldCheck, CheckCircle2, CreditCard, Send, Lock, Sparkles, Building }
 
 export default function GuaranteeAndPayment() {
   return (
-    <section className="py-16 md:py-24 relative bg-[#06101f] border-t border-slate-800">
+    <section className="py-16 md:py-24 relative bg-[#06101f] border-t border-slate-800 overflow-hidden w-full max-w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Risk Reversal / 14-Day Guarantee Card */}

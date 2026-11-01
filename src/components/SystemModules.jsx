@@ -213,10 +213,10 @@ export default function SystemModules() {
   const activeMod = modules[selectedModule];
 
   return (
-    <section id="modules" className="py-16 sm:py-24 md:py-28 relative bg-[#06101f] border-t border-slate-800">
+    <section id="modules" className="py-16 sm:py-24 md:py-28 relative bg-[#06101f] border-t border-slate-800 overflow-hidden w-full max-w-full">
       
       {/* Background Accent */}
-      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative">
         

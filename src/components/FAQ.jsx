@@ -36,10 +36,10 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-20 md:py-28 relative bg-[#071326] border-t border-slate-800">
+    <section id="faq" className="py-16 md:py-28 relative bg-[#071326] border-t border-slate-800 overflow-hidden w-full max-w-full">
       
       {/* Background Accent */}
-      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         

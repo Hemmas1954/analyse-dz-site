@@ -33,10 +33,10 @@ export default function CashCalculator() {
   );
 
   return (
-    <section id="calculator" className="py-16 sm:py-24 md:py-28 relative bg-[#071326] border-t border-slate-800">
+    <section id="calculator" className="py-16 sm:py-24 md:py-28 relative bg-[#071326] border-t border-slate-800 overflow-hidden w-full max-w-full">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[650px] h-[300px] sm:h-[500px] bg-amber-500/10 blur-[120px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[650px] h-[500px] bg-amber-500/10 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 relative">
         

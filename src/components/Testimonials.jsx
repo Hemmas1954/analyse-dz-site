@@ -45,10 +45,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 md:py-28 relative bg-[#071326] border-t border-slate-800">
+    <section className="py-16 md:py-28 relative bg-[#071326] border-t border-slate-800 overflow-hidden w-full max-w-full">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-blue-500/5 blur-[150px] pointer-events-none rounded-full" />
+      <div className="hidden sm:block absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-blue-500/5 blur-[150px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
