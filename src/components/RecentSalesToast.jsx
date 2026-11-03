@@ -8,26 +8,26 @@ export default function RecentSalesToast() {
   const notifications = [
     {
       location: 'العلمة، سطيف',
-      type: 'باقة التركيب الكامل VIP (25,000 دج)',
-      title: 'تاجر جملة أواني وأجهزة',
-      time: 'منذ 14 دقيقة'
+      type: 'باقة التثبيت الاحترافي VIP (25,000 دج)',
+      title: 'مستودع تجارة جملة وأجهزة كهرومنزلية',
+      time: 'منذ 11 دقيقة'
     },
     {
-      location: 'وهران',
-      type: 'الباقة الجاهزة (4,000 دج)',
-      title: 'متجر تجارة إلكترونية وألبسة',
-      time: 'منذ 28 دقيقة'
+      location: 'بلفور، الحراش',
+      type: 'الباقة المباشرة (4,000 دج)',
+      title: 'محل بيع الهواتف وقطع الغيار',
+      time: 'منذ 24 دقيقة'
     },
     {
-      location: 'بيلكور، العاصمة',
-      type: 'باقة التركيب الكامل VIP (25,000 دج)',
-      title: 'مستودع توزيع قطع الغيار ولوازم السيارات',
-      time: 'منذ 45 دقيقة'
+      location: 'وهران، السانيا',
+      type: 'الباقة المباشرة (4,000 دج)',
+      title: 'متجر تجارة إلكترونية وشحن COD',
+      time: 'منذ 36 دقيقة'
     },
     {
-      location: 'قسنطينة',
-      type: 'الباقة الجاهزة (4,000 دج)',
-      title: 'صاحب محل هواتف وإلكترونيات',
+      location: 'الحميز، العاصمة',
+      type: 'باقة التثبيت الاحترافي VIP (25,000 دج)',
+      title: 'مؤسسة استيراد وتوزيع أدوات صناعية',
       time: 'منذ ساعة'
     }
   ];
@@ -74,7 +74,7 @@ export default function RecentSalesToast() {
             <div className="text-xs font-bold text-white font-['Cairo']">
               {notif.title}
             </div>
-            <div className="text-[10px] text-emerald-400 font-semibold">
+            <div className="text-[10px] text-emerald-400 font-semibold font-mono">
               {notif.type}
             </div>
           </div>
@@ -92,4 +92,3 @@ export default function RecentSalesToast() {
     </div>
   );
 }
-

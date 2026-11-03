@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote, CheckCircle, TrendingUp, Building2, ShoppingBag, Wrench } from 'lucide-react';
+import { Star, Quote, CheckCircle, TrendingUp, Building2, ShoppingBag, Smartphone, Usb } from 'lucide-react';
 
 export default function Testimonials() {
   const testimonials = [
@@ -13,33 +13,33 @@ export default function Testimonials() {
       statColor: 'text-amber-400',
       badge: 'مستودع 1200 متر مربع',
       quote:
-        'عندي أكثر من 600 صنف في الديبو.. كنا نسجلو في كراس كبير وما كناش عارفين شحال من كرتونة راقدة عندها عامين. بعد ما دارولنا جماعة ANALYSE DZ التركيب الكامل، خرجتلي أرقام خلتني ندوخ: 420 مليون سنتيم كانت مجمدة في موديلات قديمة! درنا عليها بروموسيون وحررنا الكاش، واليوم كل صباح نشوف الإشعار في التيليجرام قبل ما نخرج من الدار.',
+        'عندي أكثر من 800 صنف في الديبو.. كنا نخدمو بكراس كبير وما كناش عارفين شحال من كرتونة راقدة عندها عامين. بعد ما ركبنا برنامج SMART GDS خرجتلي أرقام خلتني ندوخ: 420 مليون سنتيم كانت مجمدة في موديلات قديمة! درنا عليها تصفية سريعة بالزر تاع OODA Loop وحررنا الكاش، والبرنامج يخدم بدون إنترنت تماماً وخفيف جداً.',
       verified: true
     },
     {
-      id: 'belcourt',
-      author: 'ياسين م.',
-      role: 'مستودع توزيع قطع غيار ومستلزمات السيارات',
-      location: 'بيلكور، الجزائر العاصمة',
-      avatarIcon: Wrench,
-      stat: 'صفر حالات Rupture لزبائن الجملة الكبار',
+      id: 'belfort',
+      author: 'حميد ق.',
+      role: 'موزع هواتف وقطع غيار وإلكترونيات',
+      location: 'بلفور (الحراش)، العاصمة',
+      avatarIcon: Smartphone,
+      stat: 'استرجع 160 مليون سنتيم كريدي بالواتساب',
       statColor: 'text-emerald-400',
-      badge: 'توزيع لـ 14 ولاية',
+      badge: 'توزيع لـ 15 ولاية',
       quote:
-        'المشكل الكبير لي كان يقتلني هو Rupture de Stock المفاجئ. يجي زبون جملة يحتاج 50 بلاكيت دو فران، يقولو الخدام راهي خلاصت.. هذاك الكليان يروح للمنافس لي بجنبي وما يرجعش. بنظام ANALYSE DZ، البوت ينبهني باللون الأحمر كي تبقى 10 حبات باش نطلب لاكوموند من المورد في وقتها. رجعنا نخدمو باحترافية الشركات الكبيرة.',
+        'أقوى ميزة في هذا البرنامج هي دفتر الكريدي وتذكير الواتساب بضغطة زر. الزبائن كانو ينساو المبالغ ونستحي نطلب دراهمي، اليوم بضغطة زر تخرج رسالة رسمية مهذبة باسم المحل والمبلغ بدقة السنتيم بدون قلب للأرقام. وفي نفس الوقت ميزة وضع العامل ريحتني: نخلّي العامل يبيع ويخرج فواتير A4 وهو ما يشوفش شحال راني شاري السلعة!',
       verified: true
     },
     {
       id: 'oran',
-      author: 'رضوان ك.',
-      role: 'مؤسس براند تجارة إلكترونية وألبسة رياضية',
-      location: 'وهران (توصيل لكافة الـ 58 ولاية)',
+      author: 'ياسين ب.',
+      role: 'مؤسس متجر إلكتروني وشحن 58 ولاية (COD)',
+      location: 'وهران (السانيا)',
       avatarIcon: ShoppingBag,
-      stat: 'وفّر 180,000 دج شهرياً من نزيف الروتور',
+      stat: 'وفّر 220,000 دج شهرياً من نزيف الروتور',
       statColor: 'text-cyan-400',
-      badge: '+120 طلبية يومياً',
+      badge: '+150 طلبية يومياً',
       quote:
-        'كنت نستعمل برنامج محاسبة جزائري دفعنا فيه 4 ملايين وكان معقد والخدامين ما فهموهش. نظام الإكسل وبوت التيليجرام تاع ANALYSE DZ كان أسهل بألف مرة. حاسبة الـ COD وحدها سلكتني لأنها تخليني نحسب احتساب الروتور وتكلفة الإعلانات في الفيسبوك وتيك توك بالدينار، فصرت نعرف الربح الصافي تاع كل برودوي قبل ما نطلق الإشهار.',
+        'كنت نستعمل برنامج سحابي ندفع فيه 5 آلاف دينار شهرياً، وكل ما ينقطع النت في المحل نحبس عن الخدمة. برنامج SMART GDS Enterprise Pro شريتو مرة واحدة وبلا اشتراك، وحاسبة الـ COD كشفتلي بلي كاين منتجات كنت نظن بلي راني رابح فيها وهي تاكل في رأس المال بسبب تكلفة الروتور والإعلانات في الفيسبوك وتيك توك.',
       verified: true
     }
   ];
@@ -50,24 +50,24 @@ export default function Testimonials() {
       {/* Background Glow */}
       <div className="hidden sm:block absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-blue-500/5 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold mb-4 shadow-sm">
             <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
-            <span>قصص نجاح من قلب التجارة الجزائرية</span>
+            <span>تجارب حقيقية من كبرى أسواق الجزائر</span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight font-['Cairo'] mb-4">
-            ماذا يقول التجار الذين أوقفوا{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
-              نزيف مخازنهم؟
+            ماذا يقول التجار الذين استرجعوا{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-200">
+              السيطرة على مخازنهم؟
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300">
-            تجار جملة، أصحاب مستودعات توزيع، ومتاجر إلكترونية استرجعوا السيطرة على كاش تجارتهم بدون تعقيد.
+          <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
+            تجار جملة في العلمة وبلفور والحميز، ومتاجر إلكترونية استبدلوا الكراسات الورقية بفخامة وهيبة SMART GDS v2.1.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function Testimonials() {
             return (
               <div
                 key={t.id}
-                className="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 sm:p-7 backdrop-blur-xl flex flex-col justify-between hover:border-slate-700 transition-all shadow-xl relative"
+                className="rounded-2xl sm:rounded-3xl bg-slate-900/80 border border-slate-800 p-5 sm:p-7 backdrop-blur-xl flex flex-col justify-between hover:border-slate-700 transition-all shadow-xl relative"
               >
                 <div>
                   {/* Top Header */}
@@ -101,29 +101,32 @@ export default function Testimonials() {
                     </span>
                   </div>
 
-                  {/* Quote Body */}
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed italic mb-6 font-normal">
+                  {/* Quote */}
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed mb-6 font-['Cairo']">
                     "{t.quote}"
                   </p>
                 </div>
 
-                {/* Author Info */}
-                <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                {/* Author Card Footer */}
+                <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400 font-bold">
+                    <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400 shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm text-white font-['Cairo'] flex items-center gap-1.5">
+                      <div className="text-xs sm:text-sm font-bold text-white font-['Cairo'] flex items-center gap-1.5">
                         <span>{t.author}</span>
                         {t.verified && (
-                          <CheckCircle className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400/20" />
+                          <span className="text-[10px] text-emerald-400 font-normal">✓ موثق</span>
                         )}
                       </div>
                       <div className="text-[11px] text-slate-400">{t.role}</div>
-                      <div className="text-[10px] text-emerald-400/80 font-mono mt-0.5">{t.location}</div>
                     </div>
                   </div>
+
+                  <span className="text-[10px] text-slate-400 font-mono bg-slate-950 px-2 py-1 rounded border border-slate-800">
+                    {t.location}
+                  </span>
                 </div>
 
               </div>
@@ -135,4 +138,3 @@ export default function Testimonials() {
     </section>
   );
 }
-

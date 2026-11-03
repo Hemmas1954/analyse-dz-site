@@ -6,32 +6,32 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: 'هل يلزمني شراء برنامج محاسبة أو دفع اشتراك شهري لاستعمال النظام؟',
-      a: 'إطلاقاً! 0 دج مصاريف إضافية مدى الحياة. النظام يعمل بالكامل على نسختك الحالية من Microsoft Excel أو عبر Google Sheets السحابي المجاني 100%. لا توجد أي اشتراكات خفية، تدفع مرة واحدة ويبقى النظام ملكك إلى الأبد.'
+      q: 'هل البرنامج يحتاج إنترنت لكي يشتغل؟',
+      a: 'لا إطلاقاً! البرنامج يعمل محلياً 100% (Offline-First) على حاسوبك المكتبي أو المحمول، ولن تتوقف تجارتك أو مبيعاتك أو طباعة الفواتير حتى لو انقطع النت لشهور.'
     },
     {
-      q: 'كيف يعمل بوت تيليجرام وهل يحتاج استئجار سيرفر أو اشتراك في Make / n8n؟',
-      a: 'البوت يعتمد على سكريبت برمجي مخصص (Google Apps Script) يعمل مباشرة ومجاناً على خوادم شركة Google السحابية. لا تحتاج لشراء سيرفر VPS ولا دفع اشتراك في Make أو n8n. شرحنا لك خطوة بخطوة في فيديو مدته 5 دقائق كيف تنسخ الكود وتلصقه ويعمل البوت فوراً.'
+      q: 'هل فيه أي اشتراك شهري أو رسوم سنوية؟',
+      a: 'لا يوجد أي اشتراك شهري أو سنوي. أنت تشتري رخصة البرنامج لمرة واحدة فقط (0 دج تكلفة تشغيل) ويبقى ملكك بالكامل مدى الحياة بدون أي مصاريف خفية.'
     },
     {
-      q: 'ما عنديش خبرة كبيرة في الإكسل والكمبيوتر، هل نقدر نخدم بيه أنا والخدامين؟',
-      a: 'نعم بكل تأكيد! صممنا النظام بفلسفة "Zero Friction": جميع المعادلات الرياضية، تصنيف باريتو، وألوان إشارات المرور مبرمجة ومقفلة في الخلفية. كل ما عليك فعله هو كتابة اسم السلعة وكمية الدخول أو الخروج، والنظام يقوم بكل الحسابات والتشخيص تلقائياً.'
+      q: 'إذا تعطل جهاز الكمبيوتر هل تضيع بياناتي وسلعي؟',
+      a: 'بياناتك في أمان تام. يحتوي البرنامج على مركز نسخ احتياطي احترافي يمكنك بضغطة زر واحدة تحميل نسخة كاملة من بياناتك وملفاتك بصيغة .JSON في فلاش ديسك، واسترجاعها في أي كمبيوتر جديد خلال ثانية واحدة.'
     },
     {
-      q: 'كيفاش نخلص وكيفاش نستلم الملف في الجزائر؟',
-      a: 'نوفر طرق الدفع الأكثر أماناً وسهولة في الجزائر: تطبيق BaridiMob عبر رقم الـ RIP، أو حساب البريد الجاري CCP. بعد الدفع، ترسل لنا لقطة شاشة (Capture d\'écran) للوصل عبر واتساب، ونرسل لك فوراً رابط تحميل الملف، كود البوت، وفيديوهات الشرح في أقل من دقيقة.'
+      q: 'أنا لست خبيراً في الإعلام الآلي والبرامج المعقدة، هل هو سهل الاستعمال؟',
+      a: 'الواجهة مصممة باللغة العربية الواضحة وبخط كبير وأزرار ذكية وفلسفة Zero-Friction. في دقائق معدودة ستتعلم إضافة السلع والفوترة وتقسيم الكريدي، بالإضافة لفيديو شرح تطبيقي وإمكانية مرافقتنا لك خطوة بخطوة عبر AnyDesk.'
     },
     {
-      q: 'هل بيانات بضاعتي وأسعار الشراء والأرباح آمنة ومحمية؟',
-      a: 'أمان بياناتك 100%. النظام لا يعتمد على خوادم طرف ثالث، بل يعمل على جهاز الكمبيوتر الخاص بك أو داخل حسابك الشخصي في Google Drive المحمي بكلمة سرك والمصادقة الثنائية. نحن لا نملك أي وصول لبياناتك، بضاعتك، أو أرباحك على الإطلاق.'
+      q: 'هل أستطيع تجربة البرنامج ومعاينته قبل أن أدفع؟',
+      a: 'نعم بكل تأكيد! يمكنك مشاهدة الفيديو التوضيحي الشامل، أو نفتح معك جلسة AnyDesk مباشرة لعرض كل شاشات البرنامج ووحداته الثمانية أمامك على شاشتك مباشرة قبل أن تدفع أي دينار.'
     },
     {
-      q: 'هل نقدر نتبع الديبو من التيليفون وأنا مسافر أو خارج المخزن؟',
-      a: 'نعم! بمجرد وضع الملف في Google Sheets المجاني، يمكنك فتحه وتعديله من تطبيق الهاتف (Android / iPhone) من أي مكان في العالم. بالإضافة إلى أن بوت تيليجرام يرسل لك ملخص الديبو والسلعة الراقدة وحالات النفاذ مباشرة إلى هاتفك صباح كل يوم عند الساعة 08:00 AM.'
+      q: 'كيف يحمي البرنامج أسعار الشراء وهوامش أرباحي الحقيقية عن العمال؟',
+      a: 'البرنامج مجهز بنظام الصلاحيات المزدوج (Boss vs Worker). بمجرد تفعيل "وضع العامل"، تتحول كل أسعار الشراء ورأس المال وهوامش الربح إلى نجوم مشفرة (•••••• دج 🔒)، ويُمنع العامل من حذف أي فاتورة أو تصفير المخزن، بينما تسترجع أنت كل شيء برمز PIN الخاص بك.'
     },
     {
-      q: 'شكون يخير الباقة الجاهزة (4,000 دج) وشكون يحتاج باقة الـ VIP (25,000 دج)؟',
-      a: 'إذا كان عندك محل أو متجر إلكتروني صغير أو عدد أصنافك معقول ولديك وقت لإدخال السلع، فالباقة الجاهزة (4,000 دج) ممتازة وتكفيك تماماً. أما إذا كنت تاجر جملة (Grossiste) أو صاحب مستودع كبير به مئات الأصناف القديمة الفوضوية ولا تملك وقتاً، فباقة الـ VIP تريحك تماماً: نستلم منك كل شيء، ننظف البيانات، نضبط البوت، وندربك أنت وفريقك خلال 48 ساعة.'
+      q: 'كيفاش نخلص وكيفاش نستلم البرنامج في الجزائر؟',
+      a: 'نوفر الطرق الرسمية المعتمدة: تطبيق BaridiMob عبر رقم الـ RIP، أو حساب البريد الجاري CCP. الاستلام رقمي فوري في دقائق عبر الواتساب والإيميل للباقة المباشرة، أو إرسال فلاش ديسك USB لباب متجرك مع جلسة AnyDesk للباقة الاحترافية VIP.'
     }
   ];
 
@@ -41,24 +41,24 @@ export default function FAQ() {
       {/* Background Accent */}
       <div className="hidden sm:block absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-emerald-500/5 blur-[140px] pointer-events-none rounded-full" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8 relative">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold mb-4 shadow-sm">
             <HelpCircle className="w-3.5 h-3.5 text-emerald-400" />
             <span>إجابات واضحة وصريحة</span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight font-['Cairo'] mb-4">
-            الأسئلة الشائعة حول نظام{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
-              ANALYSE DZ
+            الأسئلة الشائعة حول برنامج{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-200">
+              SMART GDS v2.1
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300">
-            كل ما يدور في ذهنك قبل طلب النظام وبدء تحرير سيولة مخزنك.
+          <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
+            كل ما يدور في ذهنك قبل طلب نسختك والبدء في السيطرة على مخزنك وحماية أرباحك.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                  className="w-full text-right p-4 sm:p-6 flex items-center justify-between gap-3 font-bold text-white text-xs sm:text-base font-['Cairo']"
+                  className="w-full text-right p-4 sm:p-5 flex items-center justify-between gap-3 font-bold text-white text-xs sm:text-base font-['Cairo']"
                 >
                   <span className="leading-snug">{item.q}</span>
                   <div className={`p-1.5 rounded-lg border shrink-0 transition-transform duration-200 ${
@@ -97,19 +97,18 @@ export default function FAQ() {
           })}
         </div>
 
-        {/* Still have questions */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+        {/* Still have questions WhatsApp prompt */}
+        <div className="mt-10 p-5 rounded-2xl bg-slate-900/50 border border-slate-800 text-center">
           <p className="text-xs sm:text-sm text-slate-300 mb-3">
-            عندك استفسار خاص بنوع نشاطك التجاري أو حجم مستودعك؟
+            عندك استفسار خاص بنشاطك التجاري أو طبيعة سلعك في الديبو؟
           </p>
           <a
-            href="https://wa.me/213676067652?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%AD%D9%88%D9%84%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D8%AE%D8%B2%D9%88%D9%86"
+            href="https://wa.me/213676067652?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%AD%D9%88%D9%84%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20SMART%20GDS%20v2.1"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 font-bold text-xs transition-colors"
           >
-            <span>تحدث مباشرة مع مستشارنا التجاري عبر واتساب</span>
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <span>تحدث مع مستشارنا التجاري عبر واتساب (+213 676 06 76 52)</span>
           </a>
         </div>
 
@@ -117,4 +116,3 @@ export default function FAQ() {
     </section>
   );
 }
-
