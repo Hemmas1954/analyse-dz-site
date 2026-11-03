@@ -217,58 +217,56 @@ export default function Hero() {
 
               {/* TAB 1: 3D Official Product Box Showcase */}
               {activeTab === 'product' && (
-                <div className="p-2 sm:p-6 bg-gradient-to-b from-[#071326] via-[#091b33] to-[#071326] relative">
-                  
-                  {/* Outer Pulsing Green Neon Halo (ضوء نيون أخضر نابض يوحي بالقوة والمأمن) */}
-                  <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-emerald-500/30 via-teal-400/40 to-emerald-500/30 rounded-3xl blur-2xl animate-pulse pointer-events-none -z-10" />
-
-                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-emerald-400/60 shadow-[0_0_40px_rgba(16,185,129,0.35)] bg-slate-950/90 group transition-all duration-500 hover:shadow-[0_0_60px_rgba(16,185,129,0.5)]">
+                <div className="p-3 sm:p-6 bg-gradient-to-b from-[#071326] via-[#091b33] to-[#071326]">
+                  <div className="relative rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl bg-slate-950/80 group">
                     
-                    {/* Top Security & Safeguard Banner (المأمن والقوة) */}
-                    <div className="relative z-20 flex flex-wrap items-center justify-between gap-2 p-2.5 sm:px-4 sm:py-3 bg-slate-950/90 border-b border-emerald-500/30 backdrop-blur-md">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-400/50 text-emerald-300 font-bold text-[11px] sm:text-xs shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-                        <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                        <span>الحصن الرقمي لمخزنك • أمان وسرية تامة 100%</span>
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping mr-1" />
-                      </div>
-
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-[10px] sm:text-[11px] font-mono">
-                        <Zap className="w-3.5 h-3.5 text-amber-400" />
+                    {/* Top overlay badge */}
+                    <div className="hidden sm:flex absolute top-4 right-4 z-20 flex-col gap-2 pointer-events-none">
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-emerald-500/50 backdrop-blur-md text-emerald-300 font-bold text-[10px] sm:text-xs shadow-lg">
+                        <Check className="w-3.5 h-3.5 text-emerald-400 stroke-[3]" />
                         <span>SMART GDS v2.1 ENTERPRISE PRO</span>
+                      </div>
+                      <div className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 text-[10px] font-mono">
+                        <span>مكتبي مستقل • طابعات A4 • قارئ باركود</span>
                       </div>
                     </div>
 
-                    {/* Product Image - 100% Full Display Without Any Cropping */}
-                    <div className="relative w-full flex items-center justify-center p-2 sm:p-4 bg-gradient-to-b from-[#06101e] via-[#08172b] to-[#06101e] overflow-hidden">
-                      {/* Inner ambient neon aura directly behind image */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-emerald-500/15 blur-3xl rounded-full pointer-events-none animate-pulse" />
+                    {/* Top Left Instant Download Tag */}
+                    <div className="hidden sm:block absolute top-4 left-4 z-20 pointer-events-none">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500 text-slate-950 font-black text-[10px] sm:text-xs shadow-md">
+                        <Zap className="w-3 h-3 fill-slate-950" />
+                        <span>رخصة تجارية دائمة</span>
+                      </span>
+                    </div>
 
+                    {/* Product Image */}
+                    <div className="relative overflow-hidden w-full flex items-center justify-center bg-[#050e1c] py-2 sm:py-4 px-2">
                       <img
                         src={productMockupImg}
                         alt="ANALYSE DZ • SMART GDS v2.1 ENTERPRISE PRO"
-                        className="w-full h-auto max-h-[820px] object-contain rounded-xl drop-shadow-[0_15px_35px_rgba(0,0,0,0.8)] relative z-10 transform group-hover:scale-[1.01] transition-transform duration-500"
+                        className="w-auto h-auto max-h-[440px] sm:max-h-[500px] max-w-full object-contain rounded-xl drop-shadow-[0_12px_30px_rgba(0,0,0,0.85)] transform group-hover:scale-[1.01] transition-transform duration-500 relative z-10"
                         loading="eager"
                       />
+                      <div className="absolute inset-0 bg-emerald-500/10 blur-xl rounded-full pointer-events-none" />
                     </div>
 
                     {/* Product Summary Footer Bar */}
-                    <div className="p-3.5 sm:p-5 bg-[#09182f]/95 border-t border-emerald-500/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-right">
+                    <div className="p-3.5 sm:p-5 bg-[#09182f]/95 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-right">
                       <div>
-                        <div className="font-black text-sm sm:text-base text-white font-['Cairo'] flex items-center justify-center sm:justify-start gap-2">
-                          <Lock className="w-4 h-4 text-emerald-400" />
-                          <span>المنظومة المكتبية المستقلة الأولى • احمِ بضاعتك واجمع كريديك</span>
+                        <div className="font-black text-sm sm:text-base text-white font-['Cairo']">
+                          المنظومة المتكاملة لإدارة المخازن، الفوترة المتعددة، واسترجاع الكريدي
                         </div>
                         <div className="text-[11px] sm:text-xs text-slate-400 mt-0.5">
-                          تثبيت ومرافقة فورية عبر AnyDesk أو تسليم مباشر في فلاش ديسك USB لكافة الـ 58 ولاية
+                          تثبيت ومرافقة فورية عبر AnyDesk أو تسليم مباشر في فلاش ديسك USB
                         </div>
                       </div>
 
                       <div className="flex items-center gap-2 w-full sm:w-auto">
                         <a
                           href="#pricing"
-                          className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 py-2.5 px-6 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 hover:brightness-110 transition-all shadow-lg shadow-emerald-500/30 active:scale-95"
+                          className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 py-2.5 px-5 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-md active:scale-95"
                         >
-                          <span>اطلب رخصتك الآن (7,900 دج)</span>
+                          <span>اطلب رخصتك الآن</span>
                           <ArrowRight className="w-3.5 h-3.5 transform rotate-180" />
                         </a>
                       </div>
