@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import productMockupImg from '../assets/product-mockup.jpg';
 import { 
   AlertTriangle, 
   ArrowDown, 
@@ -241,7 +242,7 @@ export default function Hero() {
                     {/* Product Image */}
                     <div className="relative overflow-hidden w-full aspect-square sm:aspect-[16/10] max-h-[560px] flex items-center justify-center bg-[#071326]">
                       <img
-                        src="/product-mockup.jpg"
+                        src={productMockupImg}
                         alt="ANALYSE DZ • SMART GDS v2.1 ENTERPRISE PRO"
                         className="w-full h-full object-cover object-center transform group-hover:scale-[1.02] transition-transform duration-700"
                         loading="eager"
