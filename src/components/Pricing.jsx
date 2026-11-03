@@ -13,7 +13,7 @@ export default function Pricing() {
   };
 
   const diyWhatsapp =
-    'https://wa.me/213676067652?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AC%D8%A7%D9%87%D8%B2%D8%A9%20%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20SMART%20GDS%20v2.1%20ENTERPRISE%20PRO%20(4%2C000%20%D8%AF%D8%AC)';
+    'https://wa.me/213676067652?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AC%D8%A7%D9%87%D8%B2%D8%A9%20%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20SMART%20GDS%20v2.1%20ENTERPRISE%20PRO%20(7%2C900%20%D8%AF%D8%AC)';
 
   const vipWhatsapp =
     'https://wa.me/213676067652?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AA%D8%AB%D8%A8%D9%8A%D8%AA%20%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%20VIP%20%D9%85%D8%B9%20AnyDesk%20%D9%88%D9%81%D9%84%D8%A7%D8%B4%20%D8%AF%D9%8A%D8%B3%D9%83%20%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20SMART%20GDS%20v2.1%20(25%2C000%20%D8%AF%D8%AC)';
@@ -48,7 +48,7 @@ export default function Pricing() {
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto pt-2 lg:pt-0">
           
-          {/* CARD 1: Direct Enterprise License (4,000 DZD) */}
+          {/* CARD 1: Direct Enterprise License (7,900 DZD) */}
           <div className="rounded-3xl bg-slate-900/80 border border-slate-800 p-5 sm:p-8 lg:p-9 backdrop-blur-xl flex flex-col justify-between hover:border-slate-700 transition-all shadow-xl">
             <div>
               {/* Header */}
@@ -63,10 +63,10 @@ export default function Pricing() {
               <div className="mb-4">
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl sm:text-5xl font-black text-white font-mono tracking-tight">
-                    4,000
+                    7,900
                   </span>
                   <span className="text-lg sm:text-xl font-bold text-slate-300 font-['Cairo']">دج</span>
-                  <span className="text-xs text-slate-500 line-through mr-2 font-mono">8,000 دج</span>
+                  <span className="text-xs text-slate-500 line-through mr-2 font-mono">15,000 دج</span>
                 </div>
                 <div className="text-xs text-emerald-400 font-semibold mt-1">
                   ✓ دفع لمرة واحدة فقط مدى الحياة (بدون أي اشتراك شهري)

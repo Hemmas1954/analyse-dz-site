@@ -305,9 +305,9 @@ export default function CashCalculator() {
 
                   {/* ROI Comparison */}
                   <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-300 leading-relaxed">
-                    ⚡ <strong>سعر برنامج SMART GDS v2.1 (4,000 دج)</strong> يمثل أقل من{' '}
+                    ⚡ <strong>سعر برنامج SMART GDS v2.1 (7,900 دج)</strong> يمثل أقل من{' '}
                     <span className="font-mono font-bold text-white underline">
-                      {((4000 / totalTrappedDZD) * 100).toFixed(2)}%
+                      {((7900 / totalTrappedDZD) * 100).toFixed(2)}%
                     </span>{' '}
                     من إجمالي أموالك المعطلة. استرجاع فاتورة كريدي واحدة يغطي تكلفة البرنامج مدى الحياة!
                   </div>

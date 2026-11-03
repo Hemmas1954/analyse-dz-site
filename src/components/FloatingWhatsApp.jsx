@@ -14,8 +14,8 @@ export default function FloatingWhatsApp() {
 
   const quickMessages = [
     {
-      text: 'حاب نطلب الباقة المباشرة (4,000 دج)',
-      url: `${whatsappBaseUrl}?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%D8%A9%20%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20SMART%20GDS%20v2.1%20(4%2C000%20%D8%AF%D8%AC)`
+      text: 'حاب نطلب الباقة المباشرة (7,900 دج)',
+      url: `${whatsappBaseUrl}?text=%D8%B3%D9%84%D8%A7%D9%85%20ANALYSE%20DZ%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%D8%A9%20%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20SMART%20GDS%20v2.1%20(7%2C900%20%D8%AF%D8%AC)`
     },
     {
       text: 'حاب باقة التثبيت VIP مع AnyDesk وفلاش ديسك (25,000 دج)',
